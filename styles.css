@@ -1,0 +1,115 @@
+/* General */
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  height: 2000px; /* Erhöhte Höhe für Scrollen */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.mode-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+
+body.day-mode {
+  background-color: white;
+  color: black;
+}
+
+/* Song pages */
+
+.chords-and-lyrics {
+  margin-left: 20px;
+  font-weight: bold;
+  opacity: 0.4;
+  padding: 4px;
+  margin: 4px;
+}
+
+a {
+  color: rgb(144, 178, 183);
+  text-decoration: none;
+}
+
+.controls {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  z-index: 1001;
+  display: inline-block;
+  margin: 12px;
+}
+
+body.day-mode .controls {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+body.day-mode button {
+  background-color: black;
+  color: white;
+}
+
+.text-container {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 96px 0;
+}
+
+.chords {
+  color: rgb(144, 178, 183);
+  opacity: 0.4;
+}
+
+/* Start page */
+
+.song-list {
+  max-width: fit-content;
+  margin: 96px auto;
+}
+
+.song-list ul {
+  list-style-type: disclosure-closed;
+  padding: 0;
+}
+
+.song-list li {
+  margin: 10px 0;
+}
+
+.song-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+body.day-mode .song-list a {
+  color: black;
+}
